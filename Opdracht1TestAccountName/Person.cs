@@ -10,5 +10,10 @@ namespace Opdracht1TestAccountName
     {
         public string firstName { get; set; }
         public string lastName { get; set; }
+
+        public string generateAccount()
+        {
+            return null;
+        }
     }
 }

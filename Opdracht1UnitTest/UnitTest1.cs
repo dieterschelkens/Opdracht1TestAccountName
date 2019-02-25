@@ -7,10 +7,11 @@ namespace Opdracht1UnitTest
     [TestClass]
     public class UnitTest1
     {
+        Person person = new Person();
+
         [TestMethod]
         public void TestPersonGet2Names()
         {
-            Person person = new Person();
             string input = "Wim Beck";
             string[] names = input.Split(' ');
             person.firstName = names[0];
@@ -22,7 +23,16 @@ namespace Opdracht1UnitTest
         [TestMethod]
         public void TestPersonGenerateAccountIs6CharsLong()
         {
-            //test
+            string actualOutput = person.generateAccount();
+            Assert.Equals(actualOutput.Length, 6);
+        }
+
+        [TestMethod]
+        public void TestPersonGenerateAccountIsCorrectOutput()
+        {
+            string actualOutput = person.generateAccount();
+            string expectedOutput = "beckwb";
+            Assert.Equals(expectedOutput, actualOutput);
         }
     }
 }

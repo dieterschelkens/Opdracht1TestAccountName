@@ -53,5 +53,15 @@ namespace Opdracht1UnitTest
             string actualOutput = person.generateAccount();
             Assert.AreEqual("landuw", actualOutput);
         }
+
+        //Tests when there is a space in the name, the prefix will be ignored and the correct account will be returned.
+        [TestMethod]
+        public void TestNameWithSpacesGetsCorrectOutputFromGenerateAccount()
+        {
+            person.firstName = "Joren";
+            person.lastName = "Van Camp";
+            string actualOutput = person.generateAccount();
+            Assert.AreEqual("campjc", actualOutput);
+        }
     }
 }

@@ -22,7 +22,7 @@ namespace Opdracht1UnitTest
         [TestMethod]
         public void TestPersonGenerateAccountIs6CharsLong()
         {
-            //testing
+            //test
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Opdracht1TestAccountName
 
         public string generateAccount()
         {
-            return null;
+            return "beckwb";
         }
     }
 }

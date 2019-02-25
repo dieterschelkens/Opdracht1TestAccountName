@@ -24,7 +24,8 @@ namespace Opdracht1UnitTest
         public void TestPersonGenerateAccountIs6CharsLong()
         {
             string actualOutput = person.generateAccount();
-            Assert.Equals(actualOutput.Length, 6);
+            int ActualLenght = actualOutput.Length;
+            Assert.AreEqual(ActualLenght, 6);
         }
 
         [TestMethod]
@@ -32,7 +33,7 @@ namespace Opdracht1UnitTest
         {
             string actualOutput = person.generateAccount();
             string expectedOutput = "beckwb";
-            Assert.Equals(expectedOutput, actualOutput);
+            Assert.AreEqual(expectedOutput, actualOutput);
         }
     }
 }

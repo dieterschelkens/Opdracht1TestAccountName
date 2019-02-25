@@ -44,7 +44,10 @@ namespace Opdracht1UnitTest
         [TestMethod]
         public void TestOtherNamesGenerateAccountGiveCorrectOutput()
         {
-
+            person.firstName = "Wouter";
+            person.lastName = "Landuyt";
+            string actualOutput = person.generateAccount();
+            Assert.AreEqual("landuwl", actualOutput);
         }
     }
 }

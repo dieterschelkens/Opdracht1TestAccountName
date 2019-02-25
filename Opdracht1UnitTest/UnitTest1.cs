@@ -25,6 +25,8 @@ namespace Opdracht1UnitTest
         [TestMethod]
         public void TestPersonGenerateAccountIs6CharsLong()
         {
+            person.firstName = "Wim";
+            person.lastName = "Beck";
             string actualOutput = person.generateAccount();
             int actualLength = actualOutput.Length;
             Assert.AreEqual(6, actualLength);
@@ -34,6 +36,8 @@ namespace Opdracht1UnitTest
         [TestMethod]
         public void TestPersonGenerateAccountIsCorrectOutput()
         {
+            person.firstName = "Wim";
+            person.lastName = "Beck";
             string actualOutput = person.generateAccount();
             string expectedOutput = "beckwb";
             Assert.AreEqual(expectedOutput, actualOutput);
@@ -47,7 +51,7 @@ namespace Opdracht1UnitTest
             person.firstName = "Wouter";
             person.lastName = "Landuyt";
             string actualOutput = person.generateAccount();
-            Assert.AreEqual("landuwl", actualOutput);
+            Assert.AreEqual("landuw", actualOutput);
         }
     }
 }
